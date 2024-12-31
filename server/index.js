@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(cors({credentials:true,origin:"http://localhost:5173"}));
 app.use('/api/routes',routes);
 
-connect('mongodb+srv://venomfire_2525:sameer123@cluster0.neida3j.mongodb.net/final-task').then(
+connect(URI).then(
     app.listen(5000,()=>{
     console.log("Server running")
 })).catch(error=>console.log(error))
