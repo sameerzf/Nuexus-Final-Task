@@ -58,7 +58,7 @@ const loginUser = async(req,res,next)=>{
      }
  
      const {_id:id,name} = user;
-     const token = jwt.sign({id,name},'agwuvmvwugkzcmkgfh12312'
+     const token = jwt.sign({id,name},JWT_SECRET
         ,{expiresIn:"1d"});
  
      res.status(200).json({token,id,name})
